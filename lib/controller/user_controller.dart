@@ -20,8 +20,9 @@ class UserController extends GetxController{
     if(fetchedUsers != null){
       users = fetchedUsers;
       print("3. No Error found actually");
-      print("let's print ${users.data![1].email}");
 
+      //you can print an email of an user like thisprint("let's print ${users.data![1].email}");
+      //users.data has the fetched data from the api
     }
   }
     finally{

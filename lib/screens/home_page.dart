@@ -27,7 +27,6 @@ class HomePage extends StatelessWidget {
                   color: index.isEven ? Colors.white : Colors.orange[50],
                   child: Column(
                     children: [
-                      
                       ListTile(
                         leading: CircleAvatar(
                           foregroundImage: NetworkImage(userController.users.data![index].avatar.toString()),
@@ -36,9 +35,14 @@ class HomePage extends StatelessWidget {
                         title: Text(
                          "${userController.users.data![index].email}"
                          ),
-                        subtitle: Text("${userController.users.data![index].firstName} ${userController.users.data![index].firstName}"),
+                        subtitle: Text("${userController.users.data![index].firstName} ${userController.users.data![index].lastName}"),
 
-                        trailing: Text("${userController.users.support!.text}"),
+                        trailing: SizedBox(
+                          child: Text(
+                            "${userController.users.support!.text}"
+                          ),
+                          width: 120,
+                        ),
                       ),
                     ],
                   ),
